@@ -1,0 +1,213 @@
+/* Cyber colors */
+.bg-cyber-black {
+  background-color: #020202;
+}
+
+.bg-cyber-gray {
+  background-color: #0a0a0a;
+}
+
+.bg-cyber-dark {
+  background-color: #050505;
+}
+
+.text-neon-cyan {
+  color: #00f0ff;
+}
+
+.text-neon-pink {
+  color: #ff003c;
+}
+
+.text-neon-green {
+  color: #00ff9f;
+}
+
+.border-neon-cyan {
+  border-color: rgba(0, 240, 255, 0.4);
+}
+
+.border-neon-pink {
+  border-color: rgba(255, 0, 60, 0.4);
+}
+
+/* Hero background */
+.hero-bg {
+  background: linear-gradient(135deg, #020202 0%, #050510 100%);
+  position: relative;
+}
+
+.hero-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: 
+    radial-gradient(ellipse at 20% 30%, rgba(0, 240, 255, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 70%, rgba(255, 0, 60, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Stats card hover */
+.stats-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stats-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Image grid */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+/* Timer display */
+.timer-display {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Diagnosis buttons */
+.diagnosis-btn {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.diagnosis-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.5s;
+}
+
+.diagnosis-btn:hover::before {
+  transform: translateX(100%);
+}
+
+.diagnosis-btn:active {
+  transform: scale(0.98);
+}
+
+/* Progress bar */
+.progress-bar {
+  background: rgba(0, 240, 255, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  background: linear-gradient(90deg, #00f0ff, #00a8ff);
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+/* Medical image container */
+.medical-image-container {
+  background: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.medical-image-container img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Loading skeleton */
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.05) 25%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0.05) 75%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s infinite;
+}
+
+@keyframes skeleton-loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Fade in animation */
+.fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Pulse animation for timer */
+.pulse-warning {
+  animation: pulseWarning 1s infinite;
+}
+
+@keyframes pulseWarning {
+  0%, 100% {
+    color: #fcee0a;
+  }
+  50% {
+    color: #ff003c;
+  }
+}
+
+/* Category badge colors */
+.badge-cancer {
+  background: rgba(255, 0, 60, 0.2);
+  border: 1px solid rgba(255, 0, 60, 0.4);
+  color: #ff003c;
+}
+
+.badge-normal {
+  background: rgba(0, 255, 159, 0.2);
+  border: 1px solid rgba(0, 255, 159, 0.4);
+  color: #00ff9f;
+}
+
+.badge-benign {
+  background: rgba(252, 238, 10, 0.2);
+  border: 1px solid rgba(252, 238, 10, 0.4);
+  color: #fcee0a;
+}
+
+.badge-custom {
+  background: rgba(176, 38, 255, 0.2);
+  border: 1px solid rgba(176, 38, 255, 0.4);
+  color: #b026ff;
+}
+
+/* Chart container */
+.chart-container {
+  background: rgba(10, 10, 10, 0.5);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+/* Tooltip custom */
+.custom-tooltip {
+  background: rgba(10, 10, 10, 0.95) !important;
+  border: 1px solid rgba(0, 240, 255, 0.3) !important;
+  padding: 12px !important;
+  border-radius: 4px !important;
+}
+
+/* Footer */
+.footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}

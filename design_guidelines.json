@@ -1,0 +1,164 @@
+{
+  "identity": {
+    "name": "MedRead",
+    "aesthetic": "Clinical Cyberpunk",
+    "description": "A high-precision medical diagnostic tool with a futuristic, immersive interface. Combines the raw data density of a medical cockpit with the neon-noir aesthetics of cyberpunk. Precision meets atmosphere.",
+    "principles": [
+      "Clinical Precision in the Center: The image viewer is sacred. No distractions, perfect contrast.",
+      "Cyberpunk in the Periphery: Menus, sidebars, and HUDs use neon, glass, and tech-mono typography.",
+      "Dark Mode Default: Optimized for dark reading rooms. Deep blacks, not just dark greys.",
+      "Feedback is Immediate: Instant hover states, snappy transitions, 'tech' sounds (visualized)."
+    ]
+  },
+  "typography": {
+    "fonts": {
+      "heading": "Orbitron, sans-serif",
+      "body": "Inter, sans-serif",
+      "mono": "JetBrains Mono, monospace"
+    },
+    "usage": {
+      "h1": "font-heading font-bold text-4xl md:text-6xl tracking-wider uppercase text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600",
+      "h2": "font-heading font-semibold text-2xl md:text-3xl tracking-wide text-cyan-50",
+      "h3": "font-heading font-medium text-xl text-cyan-100/80",
+      "body": "font-body text-base text-slate-300 leading-relaxed",
+      "label": "font-mono text-xs uppercase tracking-[0.2em] text-cyan-500/70",
+      "data": "font-mono text-sm text-emerald-400"
+    },
+    "installation": "Import fonts via Google Fonts in index.css: @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Orbitron:wght@400;500;700;900&display=swap');"
+  },
+  "colors": {
+    "palette": {
+      "background": {
+        "main": "#050505",
+        "viewer": "#000000",
+        "panel": "#0a0a0a"
+      },
+      "primary": {
+        "cyan": "#00f0ff",
+        "blue": "#00a8ff",
+        "glow": "rgba(0, 240, 255, 0.5)"
+      },
+      "accent": {
+        "pink": "#ff003c",
+        "yellow": "#fcee0a",
+        "purple": "#b026ff"
+      },
+      "status": {
+        "success": "#00ff9f",
+        "warning": "#fcee0a",
+        "error": "#ff003c",
+        "neutral": "#888888"
+      },
+      "glass": {
+        "border": "rgba(0, 240, 255, 0.2)",
+        "surface": "rgba(10, 10, 10, 0.6)"
+      }
+    },
+    "tailwind_config": {
+      "extend": {
+        "colors": {
+          "cyber-black": "#020202",
+          "cyber-gray": "#121212",
+          "neon-blue": "#00f0ff",
+          "neon-pink": "#ff003c",
+          "neon-green": "#00ff9f",
+          "hologram": "rgba(0, 240, 255, 0.1)"
+        },
+        "boxShadow": {
+          "neon-blue": "0 0 10px rgba(0, 240, 255, 0.5), 0 0 20px rgba(0, 240, 255, 0.3)",
+          "neon-pink": "0 0 10px rgba(255, 0, 60, 0.5), 0 0 20px rgba(255, 0, 60, 0.3)"
+        }
+      }
+    }
+  },
+  "layout": {
+    "grid_systems": {
+      "dashboard": "grid grid-cols-1 md:grid-cols-12 gap-6 p-6",
+      "viewer": "grid grid-cols-1 lg:grid-cols-[300px_1fr_300px] h-screen overflow-hidden"
+    },
+    "spacing": {
+      "container_padding": "p-6 md:p-8",
+      "section_gap": "gap-8",
+      "widget_gap": "gap-4"
+    },
+    "z_index": {
+      "viewer": "z-0",
+      "hud_overlay": "z-10",
+      "modals": "z-50",
+      "toast": "z-100"
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "relative overflow-hidden bg-cyan-950/30 border border-cyan-500/50 text-cyan-400 font-mono uppercase tracking-widest hover:bg-cyan-500/20 hover:shadow-neon-blue transition-all duration-300 clip-path-polygon-[0_0,100%_0,100%_70%,90%_100%,0_100%]",
+      "danger": "bg-red-950/30 border border-red-500/50 text-red-400 font-mono uppercase tracking-widest hover:bg-red-500/20 hover:shadow-neon-pink transition-all duration-300",
+      "ghost": "text-slate-400 hover:text-cyan-400 hover:bg-cyan-950/10"
+    },
+    "cards": {
+      "glass": "bg-black/40 backdrop-blur-md border border-white/10 rounded-none relative before:absolute before:top-0 before:left-0 before:w-2 before:h-2 before:border-t before:border-l before:border-cyan-500 after:absolute after:bottom-0 after:right-0 after:w-2 after:h-2 after:border-b after:border-r after:border-cyan-500",
+      "solid": "bg-cyber-gray border border-white/5"
+    },
+    "inputs": {
+      "default": "bg-black/50 border border-white/20 text-cyan-50 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500/50 placeholder:text-slate-600 font-mono rounded-none"
+    }
+  },
+  "visual_enhancers": {
+    "scanlines": "pointer-events-none fixed inset-0 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] z-[9999] bg-[length:100%_2px,3px_100%] opacity-20",
+    "vignette": "pointer-events-none fixed inset-0 bg-[radial-gradient(circle_at_center,transparent_50%,rgba(0,0,0,0.6)_100%)] z-[9998]",
+    "glow_text": "text-shadow-[0_0_10px_rgba(0,240,255,0.5)]"
+  },
+  "assets": {
+    "images": [
+      {
+        "category": "background",
+        "url": "https://images.unsplash.com/photo-1655393001768-d946c97d6fd1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzd8MHwxfHNlYXJjaHwxfHxmdXR1cmlzdGljJTIwbWVkaWNhbCUyMGludGVyZmFjZSUyMGh1ZHxlbnwwfHx8Ymx1ZXwxNzY2MTQzMDEwfDA&ixlib=rb-4.1.0&q=85",
+        "description": "Futuristic server room / medical bay background"
+      },
+      {
+        "category": "landing_hero",
+        "url": "https://images.pexels.com/photos/8395815/pexels-photo-8395815.jpeg",
+        "description": "Doctor analyzing data on screens"
+      },
+      {
+        "category": "medical_sample_1",
+        "url": "https://images.unsplash.com/photo-1581595219145-01060b2eb27d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHwxfHxjaGVzdCUyMHgtcmF5JTIwbWVkaWNhbCUyMHNjYW58ZW58MHx8fGJsYWNrX2FuZF93aGl0ZXwxNzY2MTQzMDExfDA&ixlib=rb-4.1.0&q=85",
+        "description": "Chest X-ray sample (Pathology)"
+      },
+      {
+        "category": "medical_sample_2",
+        "url": "https://images.unsplash.com/photo-1516069677018-378515003435?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHwzfHxjaGVzdCUyMHgtcmF5JTIwbWVkaWNhbCUyMHNjYW58ZW58MHx8fGJsYWNrX2FuZF93aGl0ZXwxNzY2MTQzMDExfDA&ixlib=rb-4.1.0&q=85",
+        "description": "Generic X-ray chart"
+      }
+    ],
+    "icons": "Use Lucide React icons. Prefer geometric/sharp icons (e.g., Activity, Zap, Shield, Scan, Grid)."
+  },
+  "instructions_to_main_agent": {
+    "general": "Implement the 'Clinical Cyberpunk' aesthetic. Use the provided Tailwind config extensions. Ensure the image viewer area is strictly neutral (black/matte) to preserve medical accuracy.",
+    "landing_page": "Use the 'landing_hero' image with a heavy dark overlay and scanlines. Hero text should be large, Orbitron font, with a neon glow.",
+    "dashboard": "Use a 'Control Room' layout. Sidebar for navigation, main area for stats/upload. Use 'glass' cards for widgets.",
+    "reading_session": "This is the core feature. Layout: Left sidebar (Patient Info/History), Center (Image Viewer - LARGE), Right sidebar (Diagnosis Controls). The Center area must be pure black (#000000). Pre-cache the next image.",
+    "interactions": "Add sound effects (optional/visual feedback) on clicks. Use 'sonner' for toasts with a custom dark/neon theme.",
+    "charts": "Use Recharts with custom colors (Cyan, Pink, Green) on a dark background. No white backgrounds for charts."
+  },
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "You tend to converge toward generic, 'on distribution' outputs. In frontend design, this creates what users call the 'AI slop' aesthetic. Avoid this: make creative, distinctive frontends that surprise and delight.",
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients",
+    "Don't make generic centered layouts, simplistic gradients, and uniform styling.",
+    "Create depth through layered design elements with z-index hierarchy",
+    "Use glass-morphism effects with backdrop filters (12-24px blur)",
+    "You MUST NOT apply universal transition. Eg: transition: all. This results in breaking transforms. Always add transitions for specific interactive elements like button, input excluding transforms",
+    "You MUST NOT center align the app container, ie do not add .App { text-align: center; } in the css file. This disrupts the human natural reading flow of text",
+    "Always use modern button styles like pill-shaped, or sharp button with interaction animations & color relevant to the app style",
+    "NEVER: use AI assistant Emoji characters like 🤖🧠💭💡🔮🎯📚🎭🎬🎪🎉🎊🎁🎀🎂🍰🎈🎨🎰💰💵💳🏦💎🪙💸🤑📊📈📉💹🔢🏆🥇 etc for icons.",
+    "Every interaction needs micro-animations - hover states, transitions, parallax effects, and entrance animations. Static = dead.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "Subtle grain textures, noise overlays, custom cursors, selection states, and loading animations: separates good from extraordinary.",
+    "Main agent relies on these image URLs. Missing categories (especially sponsor logos) = main agent will use placeholder text which is FORBIDDEN",
+    "Prioritize using pre-existing components from src/components/ui when applicable",
+    "Create new components that match the style and conventions of existing components when needed",
+    "Examine existing components to understand the project's component patterns before creating new ones",
+    "Components MUST use named exports (export const ComponentName = ...)",
+    "Pages MUST use default exports (export default function PageName() {...})",
+    "Use 'sonner' for toasts. Sonner component are located in /app/src/components/ui/sonner.tsx"
+  ]
+}
